@@ -2,6 +2,8 @@
 
 ## Build and run the image
 
+### With the default version of [SoftHSM](https://github.com/opendnssec/SoftHSMv2/tags)
+
 1.  Build the image
 
         $ docker build --tag softhsm2:2.5.0 .
@@ -9,6 +11,17 @@
 2.  Run the image
 
         $ docker run -ti --rm softhsm2:2.5.0 sh -l
+
+### With a specific version of [SoftHSM](https://github.com/opendnssec/SoftHSMv2/tags)
+
+1.  Build the image
+
+        $ VERSION=2.6.1 && docker build --build-arg SOFTHSM2_VERSION=$VERSION --tag softhsm2:$VERSION .
+
+2.  Run the image
+
+        $ docker run -ti --rm softhsm2:2.6.1 sh -l
+
 
 ## Test it
 

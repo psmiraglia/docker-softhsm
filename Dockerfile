@@ -20,7 +20,9 @@
 
 FROM alpine:3.8
 
-ENV SOFTHSM2_VERSION=2.5.0 \
+ARG SOFTHSM2_VERSION=2.5.0
+
+ENV SOFTHSM2_VERSION=${SOFTHSM2_VERSION} \
     SOFTHSM2_SOURCES=/tmp/softhsm2
 
 # install build dependencies
